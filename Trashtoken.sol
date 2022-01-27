@@ -59,8 +59,8 @@ contract TrashToken is ERC20, Math {
         name = "Trash Token";
         decimals = 2;
         _totalSupply = 10000000;
-        balances[0x2D065DDA8CB0314fda493Da54565FE05d575B0b6] = _totalSupply;
-        emit Transfer(address(0), 0x2D065DDA8CB0314fda493Da54565FE05d575B0b6, _totalSupply);
+        balances[address] = _totalSupply;
+        emit Transfer(address(0), address, _totalSupply);
     }
  
     function totalSupply() public constant returns (uint) {
